@@ -3,23 +3,63 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>GTA VI trophy checklist</title>
+<title>Leonida Trophy Guide — GTA VI Trophy Tracker &amp; Roadmap</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-  <h1>GTA VI trophy checklist</h1>
-  <p id="progress">0 of 55 earned</p>
+<header class="masthead">
+  <div class="masthead-text">
+    <p class="kicker">Grand Theft Auto VI · PlayStation 5</p>
+    <h1>Leonida Trophy Guide</h1>
+    <p class="standfirst">All 55 official trophies with a guide and cited sources for each one, a ten-stage roadmap to the platinum, every missable flagged — and a tracker that remembers where you got to.</p>
+  </div>
+  <div class="platinum-meter" aria-label="Platinum progress">
+    <div class="meter-numbers"><span id="earned-count">0</span><span class="meter-of"> / 55 earned</span></div>
+    <div class="meter-bar"><div id="meter-fill" class="meter-fill"></div></div>
+    <div id="meter-pct" class="meter-pct">0% to Vice Got a Price!</div>
+    <div id="grade-tally" class="grade-tally"></div>
+  </div>
 </header>
-<div class="controls">
-  <label>Grade <select id="grade"><option value="all">All</option><option value="platinum">Platinum</option><option value="gold">Gold</option><option value="silver">Silver</option><option value="bronze">Bronze</option></select></label>
-  <button id="export" type="button">Export progress</button>
-  <label class="import">Import progress <input id="import" type="file" accept="application/json"></label>
-</div>
-<table>
-  <thead><tr><th>Earned</th><th>Trophy</th><th>Grade</th><th>How to get it</th></tr></thead>
-  <tbody id="rows"></tbody>
-</table>
-<script type="module" src="app.js"></script>
+
+<nav class="view-tabs" role="tablist" aria-label="Views">
+  <button id="tab-tracker" class="view-tab is-active" role="tab" aria-selected="true">Trophy tracker</button>
+  <button id="tab-roadmap" class="view-tab" role="tab" aria-selected="false">Roadmap to platinum</button>
+</nav>
+
+<main>
+  <section id="view-tracker" class="view">
+    <div class="toolbar">
+      <label class="search-box">
+        <span class="visually-hidden">Search trophies</span>
+        <input id="search" type="search" placeholder="Search name, description or guide…" autocomplete="off">
+      </label>
+      <div id="kind-chips" class="chip-row" role="group" aria-label="Filter by kind"></div>
+      <div class="toolbar-toggles">
+        <label class="toggle"><input id="spoiler-toggle" type="checkbox"> Spoiler protection <span class="toggle-hint">hides story trophies until earned</span></label>
+        <label class="toggle"><input id="hide-earned-toggle" type="checkbox"> Hide earned</label>
+      </div>
+      <div class="toolbar-actions">
+        <button id="export-btn" type="button">Export progress</button>
+        <label class="import-label">Import progress<input id="import-file" type="file" accept="application/json,.json" hidden></label>
+        <button id="reset-btn" type="button">Reset</button>
+      </div>
+    </div>
+    <p id="result-count" class="result-count" role="status"></p>
+    <div class="tracker-layout">
+      <ol id="trophy-list" class="trophy-list"></ol>
+      <aside id="detail" class="detail" aria-live="polite"></aside>
+    </div>
+  </section>
+
+  <section id="view-roadmap" class="view" hidden>
+    <div id="roadmap-root"></div>
+  </section>
+</main>
+
+<footer class="colophon">
+  <p>Trophy names, descriptions and grades are the official PlayStation list for Grand Theft Auto VI, as listed by Exophase and PSNProfiles. Every guide here is written for this entry and names its sources beside it. Progress is stored only in your browser (localStorage) — export it to keep a copy. This is a fan-made guide; it is not affiliated with Rockstar Games or PlayStation.</p>
+</footer>
+
+<script type="module" src="src/main.js"></script>
 </body>
 </html>

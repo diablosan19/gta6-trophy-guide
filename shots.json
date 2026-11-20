@@ -1,5 +1,1 @@
-[
-  { "file": "1-checklist.jpg", "path": "/", "viewport": { "width": 1280, "height": 800 } },
-  { "file": "2-silver.jpg", "path": "/", "grade": "silver", "viewport": { "width": 1280, "height": 800 } },
-  { "file": "3-bronze.jpg", "path": "/", "grade": "bronze", "scroll": 1400, "viewport": { "width": 1280, "height": 800 } }
-]
+[{"file":"1-guide.jpg","view":"Tracker with 11 of 55 trophies earned; the story trophy Break the Bank selected, its guide and cited source open in the detail panel","viewport":{"height":800,"width":1280}},{"file":"2-roadmap.jpg","view":"Roadmap to platinum: progress meter, the point-of-no-return warning, and stage 1 with its trophies shown earned","viewport":{"height":800,"width":1280}},{"file":"3-missables.jpg","view":"Tracker filtered to the 12 missable trophies; Hot Together selected, showing its missable warning, guide and source","viewport":{"height":800,"width":1280}},{"file":"4-spoilers.jpg","view":"Tracker with spoiler protection on and 2 trophies earned: unearned story trophies are masked as Hidden story trophy while earned ones are revealed","viewport":{"height":800,"width":1280}}]
